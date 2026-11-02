@@ -2,14 +2,15 @@
 
 int main(void)
 {
-    int chislo, ostatok, sumcifr;
+    int chislo, sumcifr;
+    long long ostatok;
     int kol1 = 0, kol2 = 0;
-    int summa1 = 0, summa2 = 0;
+    long long summa1 = 0, summa2 = 0;
 
     printf("Введите целые числа, 0 - конец:\n");
     while (scanf("%d", &chislo) == 1 && chislo != 0)
     {
-        ostatok = (chislo < 0) ? -chislo : chislo;
+        ostatok = (chislo < 0) ? -(long long)chislo : chislo;
         sumcifr = 0;
         while (ostatok > 0)
         {

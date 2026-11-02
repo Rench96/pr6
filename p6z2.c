@@ -7,20 +7,20 @@
 
 int main(void)
 {
-    wint_t simvol;
-    wint_t minkod = 0;
+    wchar_t simvol;
+    wchar_t minkod = 0;
     int kol = 0;
 
     setlocale(LC_ALL, "");
     wprintf(L"Введите текст, в конце поставьте #:\n");
-    while ((simvol = getwchar()) != L'#' && simvol != WEOF)
+    while ((simvol = getwchar()) != L'#')
     {
         if (kol == 0 || simvol < minkod)
             minkod = simvol;
         kol++;
     }
     if (kol > 0)
-        wprintf(L"Минимальный Unicode-код: %d\n", (int)minkod);
+        wprintf(L"Минимальный Unicode-код: %d\n", minkod);
     else
         wprintf(L"Символы не введены\n");
 
