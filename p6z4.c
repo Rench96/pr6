@@ -11,11 +11,7 @@ int main(void)
     double obem, stupen1, stupen2, stupen3, itog;
 
     printf("Введите объем воды (м3): ");
-    if (scanf("%lf", &obem) != 1 || obem < 0)
-    {
-        printf("Ошибка ввода\n");
-        return 0;
-    }
+    scanf("%lf", &obem);
 
     if (obem <= GRAN1)
     {

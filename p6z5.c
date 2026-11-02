@@ -27,31 +27,23 @@ int main(void)
         {
         case 1:
             printf("Масса (кг) и объем (м3): ");
-            if (scanf("%lf %lf", &massa, &obem) == 2 && obem != 0)
-                printf("Плотность: %.3f кг/м3\n", massa / obem);
-            else
-                printf("Ошибка ввода\n");
+            scanf("%lf %lf", &massa, &obem);
+            printf("Плотность: %.3f кг/м3\n", massa / obem);
             break;
         case 2:
             printf("Плотность (кг/м3) и объем (м3): ");
-            if (scanf("%lf %lf", &plotnost, &obem) == 2)
-                printf("Масса: %.3f кг\n", plotnost * obem);
-            else
-                printf("Ошибка ввода\n");
+            scanf("%lf %lf", &plotnost, &obem);
+            printf("Масса: %.3f кг\n", plotnost * obem);
             break;
         case 3:
             printf("Масса (кг) и плотность (кг/м3): ");
-            if (scanf("%lf %lf", &massa, &plotnost) == 2 && plotnost != 0)
-                printf("Объем: %.3f м3\n", massa / plotnost);
-            else
-                printf("Ошибка ввода\n");
+            scanf("%lf %lf", &massa, &plotnost);
+            printf("Объем: %.3f м3\n", massa / plotnost);
             break;
         case 4:
             printf("Объем (м3) и масса (кг): ");
-            if (scanf("%lf %lf", &obem, &massa) == 2 && massa != 0)
-                printf("Удельный объем: %.6f м3/кг\n", obem / massa);
-            else
-                printf("Ошибка ввода\n");
+            scanf("%lf %lf", &obem, &massa);
+            printf("Удельный объем: %.6f м3/кг\n", obem / massa);
             break;
         case 5:
             printf("Выход\n");
