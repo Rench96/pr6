@@ -3,6 +3,7 @@
 int main(void)
 {
     int vybor = 0;
+    int rez, simvol;
     double massa, obem, plotnost;
 
     while (vybor != 5)
@@ -14,9 +15,12 @@ int main(void)
         printf("5 - выход\n");
         printf("Ваш выбор: ");
 
-        if (scanf("%d", &vybor) != 1)
+        rez = scanf("%d", &vybor);
+        if (rez == EOF)
+            break;
+        if (rez != 1)
         {
-            while (getchar() != '\n')
+            while ((simvol = getchar()) != '\n' && simvol != EOF)
                 ;
             printf("Ошибка: нужно ввести число\n");
             vybor = 0;

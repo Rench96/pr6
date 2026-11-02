@@ -13,7 +13,7 @@ int main(void)
 
     setlocale(LC_ALL, "");
     wprintf(L"Введите текст, в конце поставьте #:\n");
-    while ((simvol = getwchar()) != L'#')
+    while ((simvol = getwchar()) != L'#' && simvol != WEOF)
     {
         if (kol == 0 || simvol < minkod)
             minkod = simvol;
